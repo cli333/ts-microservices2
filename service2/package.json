@@ -1,0 +1,21 @@
+{
+  "name": "service2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsc -p ./",
+    "start": "node ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/express": "*",
+    "@types/node": "*"
+  }
+}
