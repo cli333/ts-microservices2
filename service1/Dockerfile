@@ -1,9 +1,10 @@
 FROM node:alpine
 
-COPY *.json ./
+WORKDIR /app
 
-RUN npm install
+# need to copy everything, so has something to compile
+COPY . .
 
-COPY . ./
+RUN npm install --unsafe-perm --no-cache
 
 CMD [ "npm", "start" ]
