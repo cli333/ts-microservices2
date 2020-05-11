@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/api/", (req: express.Request, res: express.Response) => {
-  res.json("Requesting from Service1");
+  res.json("Requesting from Service1 🐳!!!");
 });
 
 app.listen(5000, () =>

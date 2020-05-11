@@ -7,4 +7,4 @@ COPY . .
 
 RUN npm install --unsafe-perm --no-cache
 
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "dev" ]
