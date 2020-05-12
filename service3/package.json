@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "cors": "*"
   },
   "devDependencies": {
     "@types/express": "*",

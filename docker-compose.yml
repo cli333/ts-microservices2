@@ -1,6 +1,16 @@
 version: "3"
 
 services:
+  redis:
+    container_name: redis
+    image: "redis:latest"
+
+  postgres:
+    container_name: postgres
+    image: "postgres:latest"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+
   service1:
     container_name: service1
     build:
@@ -12,8 +22,12 @@ services:
       - ./service1:/app
     environment:
       CHOKIDAR_USEPOLLING: "true"
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
     ports:
       - "5000:5000"
+    depends_on:
+      - redis
 
   service2:
     container_name: service2
@@ -26,8 +40,15 @@ services:
       - ./service2:/app
     environment:
       CHOKIDAR_USEPOLLING: "true"
+      PGUSER: "postgres"
+      PGHOST: postgres
+      PGDATABASE: "postgres"
+      PGPASSWORD: "postgres_password"
+      PGPORT: 5432
     ports:
       - "5001:5000"
+    depends_on:
+      - postgres
 
   service3:
     container_name: service3

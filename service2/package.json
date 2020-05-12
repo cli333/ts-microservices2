@@ -13,11 +13,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "cors": "*",
+    "pg": "*"
   },
   "devDependencies": {
     "@types/express": "*",
     "@types/node": "*",
+    "@types/pg": "*",
     "tsc-watch": "*"
   }
 }
