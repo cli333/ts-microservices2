@@ -21,6 +21,7 @@
     "@types/express": "*",
     "@types/node": "*",
     "@types/redis": "^2.8.20",
+    "@types/cors": "*",
     "tsc-watch": "*"
   }
 }
